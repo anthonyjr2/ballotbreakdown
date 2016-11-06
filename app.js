@@ -46,10 +46,12 @@ function renderResults(response, rawResponse)
 	{
 	  el.appendChild(document.createTextNode('Could not find polling place for ' + normalizedAddress));
 	}
+	var offices = [];
 	for(i = 0; i < response.contests.length; i++)
 	{
 		var office = document.createTextNode(response.contests[i].office);
-		createPartyTable(office);
+		offices[i] = office;
+		createPartyTable(office,offices,i);
 		for(j = 0; j < response.contests[i].candidates.length; j++)
 		{
 			var cell = document.createElement('span');
@@ -88,13 +90,18 @@ function renderResults(response, rawResponse)
 	}
 }
 	  
-function createPartyTable(office)
+function createPartyTable(office,offices,index)
 {
 	//var table = document.getElementById('contestHeader');
 	var dem = document.getElementById('leftCol');
 	var rep = document.getElementById('rightCol');
 	var demParty = document.createElement('span');
+	demParty.id = "party";
 	var repParty = document.createElement('span');
+	repParty.id = "party";
+	dem.appendChild(offices[index]);
+	dem.appendChild(document.createElement("br"));
+	rep.appendChild(document.createElement("br"));
 	demParty.innerHTML = 'Democrat';
 	dem.appendChild(demParty);
 	dem.appendChild(document.createElement("br"));

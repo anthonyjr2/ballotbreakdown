@@ -30,6 +30,9 @@ input{
     clear: all;
 
 }
+#party{
+    font-weight: bold;
+}
 /*
 #contestTable{weee
     display:table;         
