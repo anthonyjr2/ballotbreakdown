@@ -1,16 +1,22 @@
+
 form{
     margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 table {
     width: 100%;
     border : 1px sold black;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 th{
     height:50px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 th,td{
     border-bottom: 1px solid #ddd;
     text-align: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 ul {
@@ -20,10 +26,12 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 li {
     float: left;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 li a {
@@ -40,4 +48,10 @@ li a:hover:not(.active) {
 
 .active {
     background-color: #4CAF50;
+}
+h1{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+h3{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
