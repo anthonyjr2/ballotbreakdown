@@ -32,9 +32,15 @@ input{
 #party{
     font-weight: bold;
 }
-#office{
+#midCol{
     font-weight: bold;
     font-size: large;
+}
+#leftCol{
+    border-right: 1px solid black;
+}
+#rightCol{
+    border-left: 1px solid black;
 }
 .row{
     border-bottom: 1px solid black;
@@ -42,6 +48,9 @@ input{
 #results{
     padding-left: 10px;
     margin: 20px;
+}
+#el{
+    float: center;
 }
 /*
 #contestTable{weee

@@ -27,6 +27,7 @@ function lookup(address, callback)
 function renderResults(response, rawResponse)
 {
 	var el = document.getElementById('results');
+	el.id = "el"
 	if (!response || response.error)
 	{
 	  el.appendChild(document.createTextNode('Error while trying to fetch polling place'));
@@ -61,10 +62,13 @@ function renderResults(response, rawResponse)
 			var cell = document.createElement('span');
 			var demCol = document.getElementById('leftCol');
 			var repCol = document.getElementById('rightCol');
+			var off = document.getElementById('midCol');
 			if(response.contests[i].candidates[j].party == "Democratic Party" || response.contests[i].candidates[j].party == "Republican Party")
 			{
 				if(response.contests[i].candidates[j].party == "Democratic Party")
 				{
+					off.appendChild(document.createElement("br"));
+
 					if(response.contests[i].candidates[j].candidateUrl)
 					{
 						cell.innerHTML = "<a href='"+response.contests[i].candidates[j].candidateUrl+"'>"+response.contests[i].candidates[j].name+"</a>";
@@ -78,6 +82,7 @@ function renderResults(response, rawResponse)
 				}
 				else if(response.contests[i].candidates[j].party == "Republican Party")
 				{
+					off.appendChild(document.createElement("br"));
 					if(response.contests[i].candidates[j].candidateUrl)
 					{
 						cell.innerHTML = "<a href='"+response.contests[i].candidates[j].candidateUrl+"'>"+response.contests[i].candidates[j].name+"</a>";
@@ -116,12 +121,13 @@ function createPartyTable(office,offices,index)
 	var repParty = document.createElement('span');
 	repParty.id = "party";
 	off.appendChild(offices[index]);
-	off.appendChild(document.createElement("br"));
+	//off.appendChild(document.createElement("br"));
 	dem.appendChild(document.createElement("br"));
 	rep.appendChild(document.createElement("br"));
 	demParty.innerHTML = 'Democrat';
 	dem.appendChild(demParty);
 	dem.appendChild(document.createElement("br"));
+	//off.appendChild(document.createElement("br"));
 	repParty.innerHTML = 'Republican';
 	rep.appendChild(repParty);
 	rep.appendChild(document.createElement("br"));
