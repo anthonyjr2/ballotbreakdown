@@ -1,14 +1,33 @@
 <!doctype html>
 <html>
   <head>
+  	<link rel="stylesheet" type="text/css" href="style.css">
     <script src ="app.js"></script>
     <script src="http://apis.google.com/js/client.js?onload=load"></script>
   </head>
   <body>
+  	<h1 align = "center">Ballot Breakdown</h1>
+  	<ul>
+  		<li><a href="#home">Home</a></li>
+  		<li><a href="#news">News</a></li>
+  		<li><a href="#contact">Contact</a></li>
+  		<li style="float:right"><a class="active" href="#about">About</a></li>
+	</ul>
 	<form id="submitButton">
 	Address: <input type="text" name="Address"><br>
 	<input type="submit" value="Submit">
 	</form>
     <div id="results"></div>
+    <h3>Contest 1</h3>
+	<table style = "width: 100%">
+		<tr>
+    		<th>Republican</th>
+    		<th>Democrat</th>
+  		</tr>
+  		<tr>
+    		<td>Donald Trump</td>
+    		<td>Hillary Clinton</td>
+  		</tr>
+	</table>
   </body>
 </html>
