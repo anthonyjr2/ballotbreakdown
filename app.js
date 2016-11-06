@@ -9,7 +9,7 @@
          * Election ID for which to fetch voter info.
          * @type {number}
          */
-        var electionId = 2000;
+        var electionId = 5000;
  
         /**
          * Request object for given parameters.
@@ -59,14 +59,22 @@
       /**
        * Initialize the API client and make a request.
        */
-      function load() {
+      /**function load() {
         gapi.client.setApiKey('AIzaSyCOWPt4NPdyWMAV7a8szKXkG6bEBq8yL6Y');
         lookup('1263 Pacific Ave. Kansas City KS', renderResults);
-      }
+      }*/
 	  
 	  function submitButton()
 	  {
-		  var 
+		//clear if there is anything from previous tries
+		var clr = document.getElementById("results");
+		while (clr.firstChild) {
+			clr.removeChild(clr.firstChild);
+		}
+		//get value
+		var addr = document.getElementById('Address').value;
+		gapi.client.setApiKey('AIzaSyCOWPt4NPdyWMAV7a8szKXkG6bEBq8yL6Y');
+        lookup(addr, renderResults);
 	  }
 	  
 	  
