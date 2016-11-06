@@ -3,6 +3,18 @@ form{
     margin-top: 1.5em;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+div{
+
+}
+span{
+    display: inline-block;
+
+}
+#party{
+    margin-right: 50px;
+    margin-bottom: 20px;
+    display:inline;
+}
 table {
     width: 1500px;
     border : 1px solid black;
