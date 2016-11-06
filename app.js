@@ -52,6 +52,7 @@ function renderResults(response, rawResponse)
 		createPartyTable(office);
 		for(j = 0; j < response.contests[i].candidates.length; j++)
 		{
+			var candidate = document.createTextNode(response.contests[i].candidates[j]);
 			var partyList = document.getElementById('contestTable');
 			if(response.contests[i].candidates[j].party == "Democratic Party" || response.contests[i].candidates[j].party == "Republican Party")
 			{
@@ -72,22 +73,10 @@ function renderResults(response, rawResponse)
 		}
 	}
 }
-
-function addToParty(party)
-{
-	if(party == "Democratic Party")
-	{
-		
-	}
-	else if(party == "Republican Party")
-	{
-		
-	}
-}
 	  
 function createPartyTable(office)
 {
-	var table = document.createElement('table');
+	var table = document.createElement('div');
 	var row1 = table.insertRow(0);
 	var row1col1 = row1.insertCell(0);
 	row1col1.innerHTML = 'Democrat';
