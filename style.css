@@ -7,13 +7,12 @@ table {
     width: 1500px;
     border : 1px solid black;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    border-collapse: collapse;
+    border-collapse: separate;
 }
 td{
     width:750px;
     text-align: center;
     border : 1px solid black;
-    border-collapse: collapse;
 }
 th{
 
