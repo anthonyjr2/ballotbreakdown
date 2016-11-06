@@ -48,8 +48,25 @@ function renderResults(response, rawResponse)
 	}
 	for(i = 0; i < response.contests.length; i++)
 	{
-		var header = document.createTextNode(response.contests[i].office);
-		createPartyTable(header);
+		var office = document.createTextNode(response.contests[i].office);
+		createPartyTable(office);
+		for(j = 0; j < response.contests.candidates.length; j++)
+		{
+			var candidate = document.createTextNode(response.contests[i].candidates[j]);
+			var partyList = document.getElementById('contestTable');
+			if(candidate.party == "Democratic Party")
+			{
+				var row = partyList.insertRow(0);
+				var firstCell = row.insertCell(0);
+				firstcell.innerHTML = candidate.name;
+			}
+			else if(candidate.party == "Republican Party")
+			{
+				var row = partyList.insertRow(0);
+				var firstCell = row.insertCell(1);
+				firstcell.innerHTML = candidate.name;
+			}
+		}
 	}
 }
 
@@ -61,7 +78,7 @@ function renderResults(response, rawResponse)
 
 }*/
 	  
-function createPartyTable(header)
+function createPartyTable(office)
 {
 	var table = document.createElement('table');
 	var row1 = table.insertRow(0);
@@ -71,7 +88,7 @@ function createPartyTable(header)
 	row1col2.innerHTML = 'Republican';
 	// Append Table into div.
 	var div = document.getElementById('contestTable');
-	table.insertBefore(header, table.firstChild);
+	table.insertBefore(office, table.firstChild);
 	div.appendChild(table);
 }
 	  
