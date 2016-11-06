@@ -4,29 +4,45 @@ form{
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 div{
-
 }
-span{
-    display: inline-block;
-
+#contestTable{
+    display:table;         
+    width:auto;         
+    background-color:#eee;         
+    border:1px solid  #666666;         
+    border-spacing:5px;
+}
+#Table{
+    display:table-row;
+    width:auto;
+    clear:both;
+}
+#politician{
+    float:left;/*fix for  buggy browsers*/
+    display:table-column;         
+    width:400px;  
+    border: none;
+    font-weight: normal;
+    border-spacing:5px;       
+}
+#polyRow{
+    text-align: center;
 }
 #party{
-    margin-right: 50px;
+    margin-right: 400px;
     margin-bottom: 20px;
-    display:inline;
 }
-table {
-    width: 1500px;
-    border : 1px solid black;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    border-collapse: separate;
+#contest{
+    margin-left: 100px;
+    text-align:left;/*fix for  buggy browsers*/
+    width:400px;
+     border-spacing:5px 
+    font-weight: bold;
+    
 }
-td{
-    width:750px;
-    text-align: center;
-    border : 1px solid black;
-}
-th{
+#bigContest{
+    text-align: left;
+     border-spacing:5px
 
 }
 ul {

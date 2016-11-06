@@ -51,8 +51,11 @@ function renderResults(response, rawResponse)
 		var office = document.createTextNode(response.contests[i].office);
 		createPartyTable(office);
 		var newtable = document.createElement('div');
+		newtable.id = "polyRow";
 		var firstCell = document.createElement('span');
+		firstCell.id = "politician";
 		var secondCell = document.createElement('span');
+		secondCell.id = "politician";
 		for(j = 0; j < response.contests[i].candidates.length; j++)
 		{
 			var partyList = document.getElementById('contestTable');
@@ -77,12 +80,16 @@ function renderResults(response, rawResponse)
 function createPartyTable(office)
 {
 	var table = document.createElement('div');
+	table.id = "bigContest"
 	var row1 = document.createElement('div');
+	row1.id = "contest";
 	table.appendChild(row1);
 	var row1col1 = document.createElement('span');
+	row1col1.id = "party";
 	row1col1.innerHTML = 'Democrat';
 	row1.appendChild(row1col1);
 	var row1col2 = document.createElement('span');
+	row1col2.id = "party";
 	row1col2.innerHTML = 'Republican';
 	row1.appendChild(row1col2);
 	// Append Table into div.
@@ -96,6 +103,7 @@ function submitButton()
 	//clear if there is anything from previous tries
 	var clr = document.getElementById("results");
 	var clr2 = document.getElementById("contestTable");
+	//contestTable.id = "table";
 	while (clr.firstChild || clr2.firstChild)
 	{
 		if(clr.firstChild){clr.removeChild(clr.firstChild);}
