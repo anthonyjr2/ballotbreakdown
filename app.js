@@ -39,6 +39,7 @@ function renderResults(response, rawResponse)
 		var pollingAddress = pollingLocation.locationName + ', ' + pollingLocation.line1 + ' ' + pollingLocation.city + ', ' + pollingLocation.state + ' ' + pollingLocation.zip;
 		var normEl = document.createElement('strong');
 		normEl.appendChild(document.createTextNode('Polling place for ' + normalizedAddress + ': '));
+		normEl.appendChild(document.createElement("br"));
 		el.appendChild(normEl);
 		el.appendChild(document.createTextNode(pollingAddress));
 	}
@@ -47,10 +48,13 @@ function renderResults(response, rawResponse)
 	  el.appendChild(document.createTextNode('Could not find polling place for ' + normalizedAddress));
 	}
 	var offices = [];
+	offices.id = "office";
 	for(i = 0; i < response.contests.length; i++)
 	{
 		var office = document.createTextNode(response.contests[i].office);
+		office.id = "office";
 		offices[i] = office;
+		offices[i].id = "office"
 		createPartyTable(office,offices,i);
 		for(j = 0; j < response.contests[i].candidates.length; j++)
 		{
