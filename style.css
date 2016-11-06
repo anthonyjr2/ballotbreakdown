@@ -5,20 +5,30 @@ form{
 }
 div{
 }
+#dem{
+    font-weight: normal;
+    clear:all;
+}
+#gop{
+    float: right;
+    clear:all;
+}
+#demParty{
+}
+#gopParty{
+    float:right;
+    clear: all;
+}
+/*
 #contestTable{
     display:table;         
-    width:auto;         
+    width:800px;         
     background-color:#eee;         
     border:1px solid  #666666;         
     border-spacing:5px;
 }
-#Table{
-    display:table-row;
-    width:auto;
-    clear:both;
-}
 #politician{
-    float:left;/*fix for  buggy browsers*/
+    float:left;/*fix for  buggy browsers
     display:table-column;         
     width:400px;  
     border: none;
@@ -33,18 +43,16 @@ div{
     margin-bottom: 20px;
 }
 #contest{
-    margin-left: 100px;
-    text-align:left;/*fix for  buggy browsers*/
+    text-align:left;/*fix for  buggy browsers
     width:400px;
      border-spacing:5px 
-    font-weight: bold;
     
 }
 #bigContest{
     text-align: left;
      border-spacing:5px
-	
 }
+*/
 ul {
     top:0;
     list-style-type: none;

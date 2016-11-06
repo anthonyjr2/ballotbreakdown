@@ -55,9 +55,9 @@ function renderResults(response, rawResponse)
 		for(j = 0; j < response.contests[i].candidates.length; j++)
 		{
 			var firstCell = document.createElement('span');
-			firstCell.id = "politician";
+			firstCell.id = "dem";
 			var secondCell = document.createElement('span');
-			secondCell.id = "politician";
+			secondCell.id = "gop";
 			var partyList = document.getElementById('contestTable');
 			if(response.contests[i].candidates[j].party == "Democratic Party" || response.contests[i].candidates[j].party == "Republican Party")
 			{
@@ -99,11 +99,11 @@ function createPartyTable(office)
 	row1.id = "contest";
 	table.appendChild(row1);
 	var row1col1 = document.createElement('span');
-	row1col1.id = "party";
+	row1col1.id = "demParty";
 	row1col1.innerHTML = 'Democrat';
 	row1.appendChild(row1col1);
 	var row1col2 = document.createElement('span');
-	row1col2.id = "party";
+	row1col2.id = "gopParty";
 	row1col2.innerHTML = 'Republican';
 	row1.appendChild(row1col2);
 	// Append Table into div.
