@@ -46,7 +46,17 @@ function renderResults(response, rawResponse)
 	{
 	  el.appendChild(document.createTextNode('Could not find polling place for ' + normalizedAddress));
 	}
-	createPartyTable();
+	for(i = 0; i < response.contests.length; i++)
+	{
+		var cHead = document.getElementById("contestHeader");
+		var officeType = response.contests[i].office
+		var normType = document.createElement('strong');
+		normType.appendChild(document.createTextNode(officeType));
+		cHead.appendChild(normType);
+		var contestElement = document.getElementById('contestTable');
+		cHead.appendChild(contestElement);
+		createPartyTable();
+	}
 }
 
 /**
