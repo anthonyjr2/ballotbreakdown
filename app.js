@@ -59,9 +59,9 @@
       /**
        * Initialize the API client and make a request.
        */
-      /**function load() {
-        gapi.client.setApiKey('AIzaSyCOWPt4NPdyWMAV7a8szKXkG6bEBq8yL6Y');
-        lookup('1263 Pacific Ave. Kansas City KS', renderResults);
+      /**function load() 
+	  {
+
       }*/
 	  
 	  function submitButton()
