@@ -115,8 +115,6 @@ function createPartyTable(office,offices,index)
 	demParty.id = "party";
 	var repParty = document.createElement('span');
 	repParty.id = "party";
-	off.appendChild(offices[index]);
-	off.appendChild(document.createElement("br"));
 	dem.appendChild(document.createElement("br"));
 	rep.appendChild(document.createElement("br"));
 	demParty.innerHTML = 'Democrat';
@@ -125,6 +123,8 @@ function createPartyTable(office,offices,index)
 	repParty.innerHTML = 'Republican';
 	rep.appendChild(repParty);
 	rep.appendChild(document.createElement("br"));
+	off.appendChild(offices[index]);
+	off.appendChild(document.createElement("br"));
 	//dem.insertBefore(office, dem.firstChild);
 }
 	  
