@@ -1,9 +1,18 @@
 form{
     margin-top: 1.5em;
 }
-table{
-    style = width: 100%;
+table {
+    width: 100%;
+    border : 1px sold black;
 }
+th{
+    height:50px;
+}
+th,td{
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
 ul {
     top:0;
     list-style-type: none;
