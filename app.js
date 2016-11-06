@@ -86,6 +86,17 @@ function renderResults(response, rawResponse)
 					repCol.appendChild(document.createElement("br"));
 				}
 			}
+			/**if(demCol.childNodes.length-1 != repCol.childNodes.length)
+			{
+				if(response.contests[i].candidates[j].party == "Republican Party")
+				{
+					demCol.appendChild(document.createElement("br"));
+				}
+				else if(response.contests[i].candidates[j].party == "Democratic Party")
+				{
+					repCol.appendChild(document.createElement("br"));
+				}
+			}*/
 		}
 	}
 }
@@ -95,11 +106,13 @@ function createPartyTable(office,offices,index)
 	//var table = document.getElementById('contestHeader');
 	var dem = document.getElementById('leftCol');
 	var rep = document.getElementById('rightCol');
+	var off = document.getElementById('midCol');
 	var demParty = document.createElement('span');
 	demParty.id = "party";
 	var repParty = document.createElement('span');
 	repParty.id = "party";
-	dem.appendChild(offices[index]);
+	off.appendChild(offices[index]);
+	off.appendChild(document.createElement("br"));
 	dem.appendChild(document.createElement("br"));
 	rep.appendChild(document.createElement("br"));
 	demParty.innerHTML = 'Democrat';
