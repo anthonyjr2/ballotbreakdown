@@ -50,33 +50,40 @@ function renderResults(response, rawResponse)
 	{
 		var office = document.createTextNode(response.contests[i].office);
 		createPartyTable(office);
-		for(j = 0; j < response.contests.candidates.length; j++)
+		for(j = 0; j < response.contests[i].candidates.length; j++)
 		{
-			var candidate = document.createTextNode(response.contests[i].candidates[j]);
 			var partyList = document.getElementById('contestTable');
-			if(candidate.party == "Democratic Party")
+			if(response.contests[i].candidates[j].party == "Democratic Party" || response.contests[i].candidates[j].party == "Republican Party")
 			{
-				var row = partyList.insertRow(0);
-				var firstCell = row.insertCell(0);
-				firstcell.innerHTML = candidate.name;
-			}
-			else if(candidate.party == "Republican Party")
-			{
-				var row = partyList.insertRow(0);
-				var firstCell = row.insertCell(1);
-				firstcell.innerHTML = candidate.name;
+				var newtable = document.createElement('table');
+				var row = newtable.insertRow(-1);
+				var firstCell = row.insertCell(-1);
+				var secondCell = row.insertCell(-1);
+				if(response.contests[i].candidates[j].party == "Democratic Party")
+				{
+					firstCell.innerHTML = response.contests[i].candidates[j].name;
+				}
+				else if(response.contests[i].candidates[j].party == "Republican Party")
+				{
+					secondCell.innerHTML = response.contests[i].candidates[j].name;
+				}
+				partyList.appendChild(newtable);
 			}
 		}
 	}
 }
 
-/**
-* Initialize the API client and make a request.
-*/
-/**function load() 
+function addToParty(party)
 {
-
-}*/
+	if(party == "Democratic Party")
+	{
+		
+	}
+	else if(party == "Republican Party")
+	{
+		
+	}
+}
 	  
 function createPartyTable(office)
 {
