@@ -93,7 +93,7 @@ function renderResults(response, rawResponse)
 			/**if(demCol.childNodes.length-1 != repCol.childNodes.length)
 			{
 				if(response.contests[i].candidates[j].party == "Republican Party")
-				{
+				{ 
 					demCol.appendChild(document.createElement("br"));
 				}
 				else if(response.contests[i].candidates[j].party == "Democratic Party")
@@ -112,7 +112,7 @@ function createPartyTable(office,offices,index)
 	var rep = document.getElementById('rightCol');
 	var off = document.getElementById('midCol');
 	var demParty = document.createElement('span');
-	demParty.id = "party";
+	demParty.id = "party"; 
 	var repParty = document.createElement('span');
 	repParty.id = "party";
 	dem.appendChild(document.createElement("br"));
