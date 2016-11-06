@@ -50,25 +50,23 @@ function renderResults(response, rawResponse)
 	{
 		var office = document.createTextNode(response.contests[i].office);
 		createPartyTable(office);
+		var newtable = document.createElement('div');
+		var firstCell = document.createElement('span');
+		var secondCell = document.createElement('span');
 		for(j = 0; j < response.contests[i].candidates.length; j++)
 		{
 			var partyList = document.getElementById('contestTable');
 			if(response.contests[i].candidates[j].party == "Democratic Party" || response.contests[i].candidates[j].party == "Republican Party")
 			{
-				var newtable = document.createElement('div');
-				var row = document.createElement('div');
-				newtable.appendChild(row);
-				var firstCell = document.createElement('span');
-				var secondCell = document.createElement('span');
 				if(response.contests[i].candidates[j].party == "Democratic Party")
 				{
 					firstCell.innerHTML = response.contests[i].candidates[j].name;
-					row.appendChild(firstCell);
+					newtable.appendChild(firstCell);
 				}
 				else if(response.contests[i].candidates[j].party == "Republican Party")
 				{
 					secondCell.innerHTML = response.contests[i].candidates[j].name;
-					row.appendChild(secondCell);
+					newtable.appendChild(secondCell);
 				}
 				partyList.appendChild(newtable);
 			}
