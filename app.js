@@ -52,14 +52,13 @@ function renderResults(response, rawResponse)
 		createPartyTable(office);
 		for(j = 0; j < response.contests[i].candidates.length; j++)
 		{
-			var candidate = document.createTextNode(response.contests[i].candidates[j]);
 			var partyList = document.getElementById('contestTable');
 			if(response.contests[i].candidates[j].party == "Democratic Party" || response.contests[i].candidates[j].party == "Republican Party")
 			{
-				var newtable = document.createElement('table');
-				var row = newtable.insertRow(-1);
-				var firstCell = row.insertCell(-1);
-				var secondCell = row.insertCell(-1);
+				var newtable = document.createElement('div');
+				var row = document.createElement('div');
+				var firstCell = document.createElement('span');
+				var secondCell = document.createElement('span');
 				if(response.contests[i].candidates[j].party == "Democratic Party")
 				{
 					firstCell.innerHTML = response.contests[i].candidates[j].name;
@@ -77,11 +76,14 @@ function renderResults(response, rawResponse)
 function createPartyTable(office)
 {
 	var table = document.createElement('div');
-	var row1 = table.insertRow(0);
-	var row1col1 = row1.insertCell(0);
+	var row1 = document.createElement('div');
+	table.appendChild(row1);
+	var row1col1 = document.createElement('span');
 	row1col1.innerHTML = 'Democrat';
-	var row1col2 = row1.insertCell(1);
+	row1.appendChild(row1col1);
+	var row1col2 = document.createElement('span');
 	row1col2.innerHTML = 'Republican';
+	row1.appendChild(row1col2);
 	// Append Table into div.
 	var div = document.getElementById('contestTable');
 	table.insertBefore(office, table.firstChild);
