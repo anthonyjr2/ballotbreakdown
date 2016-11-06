@@ -1,6 +1,9 @@
 form{
     margin-top: 1.5em;
 }
+table{
+    style = width: 100%;
+}
 ul {
     top:0;
     list-style-type: none;
