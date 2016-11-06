@@ -1,24 +1,21 @@
 
 form{
     margin-top: 1.5em;
-    margin-bottom: 1.5em;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 table {
-    width: 100%;
-    border : 1px sold black;
+    width: 1000px;
+    border : 1px solid black;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+td{
+    width:500px;
+    text-align: center;
+    border : 1px solid black;
 }
 th{
-    height:50px;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}
-th,td{
-    border-bottom: 1px solid #ddd;
-    text-align: center;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}
 
+}
 ul {
     top:0;
     list-style-type: none;
